@@ -1,0 +1,26 @@
+<section class="container mt-3">
+  <div *ngIf="miSerie">
+    <h1>{{ miSerie.titulo }}</h1>
+    <hr>
+    <div class="row">
+      <figure class="col-12 col-md-4">
+        <img class="img-fluid" [src]="miSerie.imagen" alt="">
+      </figure>
+      <div class="col-12 col-md-8">
+        <ul>
+          <li> Creador: {{miSerie.creador}}</li>
+          <li> Fecha: {{miSerie.fechas}} </li>
+          <li> Valoración: {{miSerie.rating}} </li>
+          <li> Canal: {{miSerie.canal}} </li>
+        </ul>
+        <button class="btn btn-danger m-2" [routerLink]="['/series', miSerie.id, 'personajes']">Personajes</button>
+        <button class="btn btn-danger m-2" [routerLink]="['/series', miSerie.id, 'temporadas']">Temporadas</button>
+        <hr>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!miSerie">
+    <h1>La serie seleccionada no existe</h1>
+  </div>
+</section>

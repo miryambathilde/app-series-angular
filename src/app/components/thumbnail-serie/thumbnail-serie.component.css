@@ -1,0 +1,25 @@
+.card {
+  box-shadow: 0 0 10px rgba(39, 39, 39, 0.5);
+  min-height: 300px;
+  position: relative;
+  display: flex;
+}
+
+.card button {
+  width: 100%;
+}
+
+.card .card-body {
+  flex-grow: 1;
+}
+
+.card .imagen {
+  height: 350px;
+  background-size: cover;
+  transition: 1s;
+}
+
+.card .imagen:hover {
+  transform: scale(0.8);
+}
+

@@ -1,0 +1,11 @@
+<h3>Listado de temporadas</h3>
+<div *ngIf="arrTemporadas.length !== 0">
+  <ul>
+    <li *ngFor="let temporada of arrTemporadas">{{ temporada }}</li>
+  </ul>
+</div>
+<div *ngIf="arrTemporadas.length === 0">
+  <ul>
+    <li>En este momento no tenemos las temporadas actualizadas</li>
+  </ul>
+</div>

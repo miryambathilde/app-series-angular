@@ -1,0 +1,20 @@
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-12 col-md-3 filtros">
+      <!--  Filtros -->
+      <app-filtro
+        (filtroRating)="onFiltroRating($event)"
+        (filtroCanal)="onFiltroCanal($event)"
+        (busqueda)="onBusqueda($event)"
+      ></app-filtro>
+    </div>
+    <div class="col-12 col-md-9">
+      <!--  ListaSeries -->
+      <div class="row g-4">
+        <article *ngFor="let serie of arrSeries" class="col-6 col-md-4">
+          <app-thumbnail-serie [serie]="serie"></app-thumbnail-serie>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

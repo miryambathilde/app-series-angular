@@ -1,0 +1,20 @@
+<div class="card">
+  <!-- <img [src]="serie.imagen" class="card-img-top" [alt]="serie.titulo" /> -->
+  <div
+    class="imagen"
+    [ngStyle]="{ backgroundImage: 'url(' + serie.imagen + ')' }"
+  ></div>
+  <div class="card-body">
+    <h5 class="card-title">{{ serie.titulo }}</h5>
+    <p class="card-text">Creador: {{ serie.creador }}</p>
+    <p class="card-text">Valoración: {{ serie.rating }}</p>
+    <p class="card-text">Fechas: {{ serie.fechas }}</p>
+    <p class="card-text">Canal: {{ serie.canal }}</p>
+    <button
+      class="btn btn-primary"
+      [routerLink]="['/series', serie.id, 'personajes']"
+    >
+      Ver detalles
+    </button>
+  </div>
+</div>

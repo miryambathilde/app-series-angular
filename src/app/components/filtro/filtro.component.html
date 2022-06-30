@@ -1,0 +1,23 @@
+<div>
+  <aside class="my-3 ">
+    <label>Búsqueda por título</label>
+    <input type="text" class="form-control" placeholder="Introduce un título" (input)="recogerDatosBusqueda($event)">
+  </aside>
+  <hr>
+  <aside class="my-3">
+    <label>Valoración menor o igual a:</label>
+    <input type="number" min="0" max="10" [(ngModel)]="rating" class="form-control">
+    <button class="btn btn-primary mt-3" (click)="recogerRating()">Filtrar</button>
+  </aside>
+  <hr>
+  <aside class="my-3">
+    <label>Filtro por canal:</label>
+
+    <select (change)="recogerCanal($event)" class="form-select">
+      <option value="todos">Todos</option>
+
+      <option *ngFor="let canal of arrCanales" [value]="canal">{{canal}}</option>
+    </select>
+  </aside>
+
+</div>
